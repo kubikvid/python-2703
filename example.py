@@ -13,8 +13,9 @@ def get_persons(numbers: Iterable[int]) -> Tuple[int]:
 
 
 def intersect(ids_from_db: Tuple[int], l2: List[int]) -> List[int]:
+    s = set(l2)
     result = list()
     for i in ids_from_db:
-        if i in l2:
+        if i in s:
             result.append(i)
     return result
